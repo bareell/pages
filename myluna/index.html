@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MyLuna</title>
+    <meta name="description" content="MyLuna is a period, cycle, fertility and pregnancy tracker." />
+    <meta property="og:title" content="MyLuna" />
+    <meta property="og:description" content="Period, cycle, fertility and pregnancy tracker." />
+    <meta property="og:image" content="https://bareell.github.io/pages/myluna/icon.png" />
+    <link rel="icon" href="icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="site.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <a class="brand" href="./">
+        <img src="icon.png" alt="" />
+        <span>MyLuna</span>
+      </a>
+
+      <h1 data-t="title">Know your cycle, listen to yourself.</h1>
+      <p class="muted" data-t="sub">
+        Periods, fertile days, mood and pregnancy in one place. Works without an account.
+      </p>
+      <a class="btn btn-primary" href="https://apps.apple.com/app/id6830817617" data-t="get"
+        >Download on the App Store</a
+      >
+
+      <h2 data-t="what">What MyLuna does</h2>
+      <ul class="features">
+        <li>
+          <strong data-t="f1t">Cycle tracking</strong>
+          <span class="muted" data-t="f1d">Log periods, symptoms and mood in a few taps.</span>
+        </li>
+        <li>
+          <strong data-t="f2t">Predictions</strong>
+          <span class="muted" data-t="f2d">Next period, fertile window and ovulation estimates.</span>
+        </li>
+        <li>
+          <strong data-t="f3t">Pregnancy mode</strong>
+          <span class="muted" data-t="f3d">Week by week tracking, then a postpartum mode.</span>
+        </li>
+        <li>
+          <strong data-t="f4t">Reminders and reports</strong>
+          <span class="muted" data-t="f4d">Gentle reminders and a PDF report for your doctor.</span>
+        </li>
+        <li>
+          <strong data-t="f5t">Articles and Ask MyLuna</strong>
+          <span class="muted" data-t="f5d">Educational articles and an assistant for general questions.</span>
+        </li>
+      </ul>
+
+      <footer>
+        <div data-t="about">
+          MyLuna gives general, educational information. It is not a medical device or a birth
+          control method.
+        </div>
+        <nav>
+          <a href="https://bareell.github.io/legal-docs/myluna-app-privacy.html" data-t="privacy">Privacy</a>
+          <a href="https://bareell.github.io/legal-docs/myluna-app-terms.html" data-t="terms">Terms</a>
+          <a href="https://bareell.github.io/legal-docs/myluna-app-support.html" data-t="support">Support</a>
+        </nav>
+      </footer>
+    </main>
+
+    <script>
+      (function () {
+        var tr = {
+          title: 'Döngünü tanı, kendini dinle.',
+          sub: 'Regl, doğurgan günler, ruh hali ve gebelik tek yerde. Hesap açmadan kullanılır.',
+          get: 'App Store’dan indir',
+          what: 'MyLuna ne yapar?',
+          f1t: 'Döngü takibi',
+          f1d: 'Regl, belirti ve ruh halini birkaç dokunuşla kaydet.',
+          f2t: 'Tahminler',
+          f2d: 'Sonraki regl, doğurgan dönem ve yumurtlama tahminleri.',
+          f3t: 'Gebelik modu',
+          f3d: 'Hafta hafta takip, ardından doğum sonrası modu.',
+          f4t: 'Hatırlatmalar ve raporlar',
+          f4d: 'Nazik hatırlatmalar ve doktorun için PDF rapor.',
+          f5t: 'Yazılar ve MyLuna’ya sor',
+          f5d: 'Bilgilendirici yazılar ve genel sorular için bir asistan.',
+          about: 'MyLuna genel ve eğitici bilgi sunar. Tıbbi cihaz ya da doğum kontrol yöntemi değildir.',
+          privacy: 'Gizlilik',
+          terms: 'Koşullar',
+          support: 'Destek',
+        };
+        var first = String((navigator.languages || [navigator.language || 'en'])[0]).toLowerCase();
+        if (first.slice(0, 2) !== 'tr') return;
+        document.documentElement.lang = 'tr';
+        document.querySelectorAll('[data-t]').forEach(function (el) {
+          var key = el.getAttribute('data-t');
+          if (tr[key]) el.textContent = tr[key];
+        });
+      })();
+    </script>
+  </body>
+</html>

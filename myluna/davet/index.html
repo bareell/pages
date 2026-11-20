@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>MyLuna invite</title>
+    <meta property="og:title" content="MyLuna invite" />
+    <meta property="og:description" content="A friend invited you to MyLuna. Your gift: 1 ad-free month." />
+    <meta property="og:image" content="https://bareell.github.io/pages/myluna/icon.png" />
+    <link rel="icon" href="../icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../site.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <a class="brand" href="../">
+        <img src="../icon.png" alt="" />
+        <span>MyLuna</span>
+      </a>
+
+      <h1 data-t="title">A friend gifted you 1 ad-free month on MyLuna</h1>
+      <p class="muted" data-t="sub">
+        Your gift starts with your first log. No credit card needed, no automatic charge when it
+        ends.
+      </p>
+
+      <section class="card" id="code-card" hidden>
+        <div class="code-label" data-t="codeLabel">Your invite code</div>
+        <div class="code-row">
+          <div class="code" id="code"></div>
+          <button class="btn-ghost" id="copy" type="button" data-t="copy">Copy</button>
+        </div>
+        <a class="btn btn-primary" id="store" href="https://apps.apple.com/app/id6830817617" data-t="get"
+          >Download on the App Store</a
+        >
+        <a class="btn btn-outline" id="open" href="#" hidden data-t="open">Open in MyLuna</a>
+      </section>
+
+      <section class="card" id="nocode-card" hidden>
+        <p data-t="nocode">
+          This link has no invite code. Ask your friend to send the link again.
+        </p>
+        <a class="btn btn-primary" href="https://apps.apple.com/app/id6830817617" data-t="get"
+          >Download on the App Store</a
+        >
+      </section>
+
+      <h2 data-t="how">How does it work?</h2>
+      <ol class="steps">
+        <li data-t="s1">Download MyLuna from the App Store.</li>
+        <li data-t="s2">On the first screen, tap “I have an invite code” and enter the code above.</li>
+        <li data-t="s3">Make your first log and your gift month starts.</li>
+      </ol>
+
+      <p class="muted" data-t="foot">The person who invited you sees nothing about you.</p>
+
+      <footer>
+        <div data-t="about">
+          MyLuna is a period, cycle and pregnancy tracker. It is not a medical device or a birth
+          control method.
+        </div>
+        <nav>
+          <a href="https://bareell.github.io/legal-docs/myluna-app-privacy.html" data-t="privacy">Privacy</a>
+          <a href="https://bareell.github.io/legal-docs/myluna-app-terms.html" data-t="terms">Terms</a>
+          <a href="https://bareell.github.io/legal-docs/myluna-app-support.html" data-t="support">Support</a>
+        </nav>
+      </footer>
+    </main>
+
+    <script>
+      (function () {
+        var T = {
+          en: {
+            doc: 'MyLuna invite',
+            title: 'A friend gifted you 1 ad-free month on MyLuna',
+            sub: 'Your gift starts with your first log. No credit card needed, no automatic charge when it ends.',
+            codeLabel: 'Your invite code',
+            copy: 'Copy',
+            copied: 'Copied',
+            get: 'Download on the App Store',
+            open: 'Open in MyLuna',
+            nocode: 'This link has no invite code. Ask your friend to send the link again.',
+            how: 'How does it work?',
+            s1: 'Download MyLuna from the App Store.',
+            s2: 'On the first screen, tap “I have an invite code” and enter the code above.',
+            s3: 'Make your first log and your gift month starts.',
+            foot: 'The person who invited you sees nothing about you.',
+            about: 'MyLuna is a period, cycle and pregnancy tracker. It is not a medical device or a birth control method.',
+            privacy: 'Privacy',
+            terms: 'Terms',
+            support: 'Support',
+          },
+          tr: {
+            doc: 'MyLuna daveti',
+            title: 'Bir arkadaşın sana MyLuna’da 1 ay reklamsız kullanım hediye etti',
+            sub: 'Hediyen ilk kaydınla başlar. Kredi kartı gerekmez, bitince otomatik ücret alınmaz.',
+            codeLabel: 'Davet kodun',
+            copy: 'Kopyala',
+            copied: 'Kopyalandı',
+            get: 'App Store’dan indir',
+            open: 'MyLuna’da aç',
+            nocode: 'Bu bağlantıda davet kodu yok. Arkadaşından bağlantıyı yeniden göndermesini iste.',
+            how: 'Nasıl çalışır?',
+            s1: 'MyLuna’yı App Store’dan indir.',
+            s2: 'İlk ekranda “Davet kodum var” seçeneğine dokun ve yukarıdaki kodu gir.',
+            s3: 'İlk kaydını yap, hediye ayın başlasın.',
+            foot: 'Seni davet eden kişi seninle ilgili hiçbir şey görmez.',
+            about: 'MyLuna; regl, döngü ve gebelik takibi uygulamasıdır. Tıbbi cihaz ya da doğum kontrol yöntemi değildir.',
+            privacy: 'Gizlilik',
+            terms: 'Koşullar',
+            support: 'Destek',
+          },
+          de: {
+            doc: 'MyLuna Einladung',
+            title: 'Eine Freundin schenkt dir 1 werbefreien Monat bei MyLuna',
+            sub: 'Dein Geschenk beginnt mit deinem ersten Eintrag. Keine Kreditkarte nötig, danach keine automatische Abbuchung.',
+            codeLabel: 'Dein Einladungscode',
+            copy: 'Kopieren',
+            copied: 'Kopiert',
+            get: 'Im App Store laden',
+            open: 'In MyLuna öffnen',
+            nocode: 'Dieser Link enthält keinen Einladungscode. Bitte lass dir den Link noch einmal schicken.',
+            how: 'So funktioniert es',
+            s1: 'Lade MyLuna im App Store.',
+            s2: 'Tippe auf dem ersten Bildschirm auf „Ich habe einen Einladungscode“ und gib den Code oben ein.',
+            s3: 'Mach deinen ersten Eintrag, dann beginnt dein Geschenkmonat.',
+            foot: 'Die Person, die dich eingeladen hat, sieht nichts über dich.',
+            about: 'MyLuna ist ein Perioden-, Zyklus- und Schwangerschaftstracker. Es ist kein Medizinprodukt und keine Verhütungsmethode.',
+            privacy: 'Datenschutz',
+            terms: 'Nutzungsbedingungen',
+            support: 'Support',
+          },
+          fr: {
+            doc: 'Invitation MyLuna',
+            title: 'Une amie vous offre 1 mois sans publicité sur MyLuna',
+            sub: 'Votre cadeau commence avec votre première saisie. Aucune carte bancaire requise, aucun prélèvement automatique à la fin.',
+            codeLabel: 'Votre code d’invitation',
+            copy: 'Copier',
+            copied: 'Copié',
+            get: 'Télécharger dans l’App Store',
+            open: 'Ouvrir dans MyLuna',
+            nocode: 'Ce lien ne contient pas de code d’invitation. Demandez à votre amie de renvoyer le lien.',
+            how: 'Comment ça marche ?',
+            s1: 'Téléchargez MyLuna dans l’App Store.',
+            s2: 'Sur le premier écran, touchez « J’ai un code d’invitation » et saisissez le code ci-dessus.',
+            s3: 'Faites votre première saisie et votre mois offert commence.',
+            foot: 'La personne qui vous a invitée ne voit rien à votre sujet.',
+            about: 'MyLuna est une application de suivi des règles, du cycle et de la grossesse. Ce n’est ni un dispositif médical ni une méthode de contraception.',
+            privacy: 'Confidentialité',
+            terms: 'Conditions',
+            support: 'Assistance',
+          },
+          es: {
+            doc: 'Invitación de MyLuna',
+            title: 'Una amiga te regaló 1 mes sin anuncios en MyLuna',
+            sub: 'Tu regalo empieza con tu primer registro. No necesitas tarjeta y no hay cobro automático al terminar.',
+            codeLabel: 'Tu código de invitación',
+            copy: 'Copiar',
+            copied: 'Copiado',
+            get: 'Descargar en el App Store',
+            open: 'Abrir en MyLuna',
+            nocode: 'Este enlace no tiene código de invitación. Pide a tu amiga que te lo envíe de nuevo.',
+            how: '¿Cómo funciona?',
+            s1: 'Descarga MyLuna en el App Store.',
+            s2: 'En la primera pantalla, toca «Tengo un código de invitación» e introduce el código de arriba.',
+            s3: 'Haz tu primer registro y empieza tu mes de regalo.',
+            foot: 'La persona que te invitó no ve nada sobre ti.',
+            about: 'MyLuna es una app de seguimiento del periodo, el ciclo y el embarazo. No es un dispositivo médico ni un método anticonceptivo.',
+            privacy: 'Privacidad',
+            terms: 'Términos',
+            support: 'Ayuda',
+          },
+          pt: {
+            doc: 'Convite do MyLuna',
+            title: 'Uma amiga te deu 1 mês sem anúncios no MyLuna',
+            sub: 'Seu presente começa com seu primeiro registro. Sem cartão de crédito e sem cobrança automática no fim.',
+            codeLabel: 'Seu código de convite',
+            copy: 'Copiar',
+            copied: 'Copiado',
+            get: 'Baixar na App Store',
+            open: 'Abrir no MyLuna',
+            nocode: 'Este link não tem código de convite. Peça para sua amiga enviar o link de novo.',
+            how: 'Como funciona?',
+            s1: 'Baixe o MyLuna na App Store.',
+            s2: 'Na primeira tela, toque em “Tenho um código de convite” e digite o código acima.',
+            s3: 'Faça seu primeiro registro e seu mês de presente começa.',
+            foot: 'A pessoa que te convidou não vê nada sobre você.',
+            about: 'MyLuna é um app de acompanhamento da menstruação, do ciclo e da gravidez. Não é um dispositivo médico nem um método contraceptivo.',
+            privacy: 'Privacidade',
+            terms: 'Termos',
+            support: 'Suporte',
+          },
+          it: {
+            doc: 'Invito MyLuna',
+            title: 'Un’amica ti ha regalato 1 mese senza pubblicità su MyLuna',
+            sub: 'Il regalo inizia con la tua prima registrazione. Nessuna carta di credito, nessun addebito automatico alla fine.',
+            codeLabel: 'Il tuo codice invito',
+            copy: 'Copia',
+            copied: 'Copiato',
+            get: 'Scarica dall’App Store',
+            open: 'Apri in MyLuna',
+            nocode: 'Questo link non contiene un codice invito. Chiedi alla tua amica di inviarlo di nuovo.',
+            how: 'Come funziona?',
+            s1: 'Scarica MyLuna dall’App Store.',
+            s2: 'Nella prima schermata tocca “Ho un codice invito” e inserisci il codice qui sopra.',
+            s3: 'Fai la tua prima registrazione e inizia il tuo mese in regalo.',
+            foot: 'La persona che ti ha invitata non vede nulla di te.',
+            about: 'MyLuna è un’app per monitorare ciclo, mestruazioni e gravidanza. Non è un dispositivo medico né un metodo contraccettivo.',
+            privacy: 'Privacy',
+            terms: 'Termini',
+            support: 'Assistenza',
+          },
+          ja: {
+            doc: 'MyLuna 招待',
+            title: 'お友だちから MyLuna の広告なし1か月がプレゼントされました',
+            sub: 'プレゼントは最初の記録から始まります。クレジットカードは不要で、終了後に自動で請求されることはありません。',
+            codeLabel: '招待コード',
+            copy: 'コピー',
+            copied: 'コピーしました',
+            get: 'App Store でダウンロード',
+            open: 'MyLuna で開く',
+            nocode: 'このリンクには招待コードがありません。お友だちにもう一度送ってもらってください。',
+            how: '使い方',
+            s1: 'App Store で MyLuna をダウンロードします。',
+            s2: '最初の画面で「招待コードを持っています」をタップし、上のコードを入力します。',
+            s3: '最初の記録をつけると、プレゼントの1か月が始まります。',
+            foot: '招待した人にあなたの情報が見えることはありません。',
+            about: 'MyLuna は生理、周期、妊娠を記録するアプリです。医療機器でも避妊法でもありません。',
+            privacy: 'プライバシー',
+            terms: '利用規約',
+            support: 'サポート',
+          },
+          ko: {
+            doc: 'MyLuna 초대',
+            title: '친구가 MyLuna 광고 없는 1개월을 선물했어요',
+            sub: '선물은 첫 기록과 함께 시작됩니다. 신용카드가 필요 없고, 끝난 뒤 자동 결제되지 않습니다.',
+            codeLabel: '초대 코드',
+            copy: '복사',
+            copied: '복사됨',
+            get: 'App Store에서 다운로드',
+            open: 'MyLuna에서 열기',
+            nocode: '이 링크에는 초대 코드가 없습니다. 친구에게 링크를 다시 보내 달라고 하세요.',
+            how: '이용 방법',
+            s1: 'App Store에서 MyLuna를 다운로드하세요.',
+            s2: '첫 화면에서 “초대 코드가 있어요”를 누르고 위의 코드를 입력하세요.',
+            s3: '첫 기록을 남기면 선물 1개월이 시작됩니다.',
+            foot: '초대한 사람은 회원님에 대한 어떤 정보도 볼 수 없습니다.',
+            about: 'MyLuna는 생리, 주기, 임신 기록 앱입니다. 의료 기기나 피임 방법이 아닙니다.',
+            privacy: '개인정보',
+            terms: '이용약관',
+            support: '지원',
+          },
+          ar: {
+            doc: 'دعوة MyLuna',
+            title: 'أهدتكِ صديقتكِ شهرًا بلا إعلانات على MyLuna',
+            sub: 'تبدأ هديتكِ مع أول تسجيل لكِ. لا حاجة إلى بطاقة ائتمان، ولا خصم تلقائي عند انتهائها.',
+            codeLabel: 'رمز الدعوة',
+            copy: 'نسخ',
+            copied: 'تم النسخ',
+            get: 'التنزيل من App Store',
+            open: 'الفتح في MyLuna',
+            nocode: 'هذا الرابط لا يحتوي على رمز دعوة. اطلبي من صديقتكِ إرسال الرابط مرة أخرى.',
+            how: 'كيف تعمل؟',
+            s1: 'نزّلي MyLuna من App Store.',
+            s2: 'في الشاشة الأولى اضغطي على «لدي رمز دعوة» وأدخلي الرمز أعلاه.',
+            s3: 'سجّلي أول إدخال لكِ ليبدأ شهر الهدية.',
+            foot: 'من دعتكِ لا ترى أي شيء عنكِ.',
+            about: 'MyLuna تطبيق لتتبع الدورة الشهرية والحمل. ليس جهازًا طبيًا ولا وسيلة لمنع الحمل.',
+            privacy: 'الخصوصية',
+            terms: 'الشروط',
+            support: 'الدعم',
+          },
+        };
+
+        var params = new URLSearchParams(location.search);
+        var forced = (params.get('lang') || '').toLowerCase().slice(0, 2);
+        var langs = forced ? [forced] : (navigator.languages || [navigator.language || 'en']);
+        var lang = 'en';
+        for (var i = 0; i < langs.length; i++) {
+          var short = String(langs[i]).toLowerCase().slice(0, 2);
+          if (T[short]) {
+            lang = short;
+            break;
+          }
+        }
+        var t = T[lang];
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        document.title = t.doc;
+        document.querySelectorAll('[data-t]').forEach(function (el) {
+          var key = el.getAttribute('data-t');
+          if (t[key]) el.textContent = t[key];
+        });
+
+        var raw = (params.get('code') || location.hash.replace(/^#/, '') || '').trim().toUpperCase();
+        var code = /^[A-Z0-9-]{3,24}$/.test(raw) ? raw : '';
+
+        if (!code) {
+          document.getElementById('nocode-card').hidden = false;
+          return;
+        }
+
+        document.getElementById('code-card').hidden = false;
+        document.getElementById('code').textContent = code;
+
+        var copyBtn = document.getElementById('copy');
+        copyBtn.addEventListener('click', function () {
+          var done = function () {
+            copyBtn.textContent = t.copied;
+            setTimeout(function () {
+              copyBtn.textContent = t.copy;
+            }, 1800);
+          };
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(code).then(done, function () {});
+          } else {
+            var range = document.createRange();
+            range.selectNodeContents(document.getElementById('code'));
+            var sel = getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
+            try {
+              document.execCommand('copy');
+              done();
+            } catch (e) {}
+          }
+        });
+
+        if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+          var open = document.getElementById('open');
+          open.href = 'myluna://invite?code=' + encodeURIComponent(code);
+          open.hidden = false;
+        }
+      })();
+    </script>
+  </body>
+</html>
